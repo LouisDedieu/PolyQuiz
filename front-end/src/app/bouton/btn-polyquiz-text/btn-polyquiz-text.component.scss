@@ -1,0 +1,55 @@
+@font-face {
+  font-family: 'DynaPuff';
+  src: url('../../../assets/Fonts/dynapuff/fonts/variable/DynaPuff[wdth,wght].ttf');
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.container:hover {
+  cursor: pointer;
+}
+
+
+img {
+  width: 3.3vw;
+  height: 3vw;
+  filter: drop-shadow(0.5vw 1vh 0px #000000);
+}
+
+.contrastUpContainer{
+  border-radius: 100px;
+}
+
+.contrastDownButton{
+  padding: 10px;
+  color: white;
+  font-family: DynaPuff;
+  font-size: 3vw;
+  font-weight: 700;
+  color: #FFFDF8;
+  text-shadow: 0.5vw 1vh 0 #1E1E1E;
+  text-decoration: none;
+}
+
+.contrastUpButton{
+  padding: 10px;
+  color: black;
+  font-family: DynaPuff;
+  font-size: 3vw;
+  font-weight: 700;
+
+  text-shadow: none;
+  text-decoration: none;
+}
+
+.imgContrastUp{
+  filter: invert(1);
+}
+
+
+

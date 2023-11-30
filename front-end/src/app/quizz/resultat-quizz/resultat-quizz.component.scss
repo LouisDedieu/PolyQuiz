@@ -1,0 +1,283 @@
+.titrePage {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+#quizName {
+  margin: 0;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#polyquizHome {
+  margin-right: 10px;
+}
+
+.containerButtons {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  bottom: 10%;
+  width: 50%;
+}
+
+.pageContainer {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.bubble_contrastOff {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 40vw;
+  height: 45vh;
+  border-radius: 49%;
+  background-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  font-size: 1.5vw;
+  font-family: Mukta;
+  text-transform: uppercase;
+  color: #282936;
+}
+
+.textBubbleWithAnimationsON {
+  opacity: 0;
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 1.8s;
+}
+
+@keyframes animatorFadeIn {
+  from {
+    bottom : -40%;
+  }
+  to {
+    bottom : 0%;
+  }
+}
+
+.animatorContainer {
+  position: absolute;
+  height: 40vh;
+  width: 38vh;
+  left: 1%;
+  bottom: 0%
+}
+
+.animator-relative {
+  object-fit: contain;
+  height: 100%;
+  width: 100%;
+}
+
+.animatorWithAnimationsON {
+  animation-name: animatorFadeIn;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.bubbleAnimationsON {
+  background: rgba(225, 225, 225, 0.5);
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.bubbleAnimationsOFF {
+  background: rgba(225, 225, 225, 0.5);
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  opacity: 1;
+}
+
+#bubble1 {
+  position: absolute;
+  top: 59.5vh;
+  left: 15.5vw;
+  height: 1vw;
+  width: 1vw;
+  animation-delay: 0.8s;
+}
+
+#bubble2 {
+  position: absolute;
+  top: 52vh;
+  left: 16.7vw;
+  height: 2vw;
+  width: 2vw;
+  animation-delay: 1.1s;
+}
+
+#bubble3 {
+  position: absolute;
+  top: 44vh;
+  left: 19.5vw;
+  height: 3vw;
+  width: 3vw;
+  animation-delay: 1.3s;
+}
+
+#bubble4 {
+  position: absolute;
+  top: 38vh;
+  left: 24vw;
+  height: 4vw;
+  width: 4vw;
+  animation-delay: 1.5s;
+}
+
+.bubble_contrastOn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 40vw;
+  height: 45vh;
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  font-size: 1.5vw;
+  font-family: Mukta;
+  text-transform: uppercase;
+  color: #282936;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Mukta:700');
+
+$bg: #f3f8fa;
+$white: #fff;
+$black: #282936;
+
+@mixin transition($property: all, $duration: 0.45s, $ease: cubic-bezier(0.65,0,.076,1)) {
+  transition: $property $duration $ease;
+}
+
+* {
+  box-sizing: border-box;
+  &::before, &::after {
+    box-sizing: border-box;
+  }
+}
+
+button {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  background: transparent;
+  padding: 0;
+  font-size: inherit;
+  font-family: inherit;
+  &.learn-more {
+    width: 18rem;
+    height: 3.7rem;
+    font-size: 1.4rem;
+    .circle {
+      @include transition(all, 0.45s, cubic-bezier(0.65,0,.076,1));
+      position: relative;
+      display: block;
+      margin: 0;
+      width: 3rem;
+      height: 3rem;
+      background: linear-gradient(90deg, #8891b2 0%, #94abbb 100%);
+      border-radius: 1.625rem;
+      .icon {
+        @include transition(all, 0.45s, cubic-bezier(0.65,0,.076,1));
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        background: $black;
+        &.arrow {
+          @include transition(all, 0.45s, cubic-bezier(0.65,0,.076,1));
+          left: 0.625rem;
+          width: 1.125rem;
+          height: 0.125rem;
+          background: none;
+          &::before {
+            position: absolute;
+            content: '';
+            top: -0.25rem;
+            right: 0.0625rem;
+            width: 0.625rem;
+            height: 0.625rem;
+            border-top: 0.125rem solid #fff;
+            border-right: 0.125rem solid #fff;
+            transform: rotate(45deg);
+          }
+        }
+      }
+    }
+    .button-text {
+      @include transition(all, 0.45s, cubic-bezier(0.65,0,.076,1));
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding: 0.75rem 0;
+      margin: 0 0 0 1.85rem;
+      color: $black;
+      font-weight: 700;
+      line-height: 1.6;
+      text-align: center;
+      text-transform: uppercase;
+      text-shadow: $white 1px 1px 0.125rem;
+    }
+  }
+  &:hover {
+    .circle {
+      width: 100%;
+      .icon {
+        &.arrow {
+          background: $white;
+          transform: translate(1rem, 0);
+        }
+      }
+    }
+    .button-text {
+      color: $white;
+      text-shadow: $black 1px 1px 0.125rem;
+    }
+  }
+}
+
+@supports (display: grid) {
+
+  #container {
+    grid-area: main;
+    align-self: center;
+    justify-self: center;
+  }
+}
+
+

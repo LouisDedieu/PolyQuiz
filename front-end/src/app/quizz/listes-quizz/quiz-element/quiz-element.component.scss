@@ -1,0 +1,97 @@
+.buttonPlay{
+    text-align: center;
+}
+.containerButton {
+    text-align: center;
+}
+
+.card {
+  background: rgba(217, 217, 217, 0.4);
+  border-radius: 50px;
+  border: 1px solid white;
+  overflow: hidden;
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.card:hover{
+  cursor: pointer;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+  transition: box-shadow 0.150s ease-in-out;
+}
+
+.card:hover::after{
+  box-shadow: 0 0 0px rgba(0, 0, 0, 0);
+  transition: box-shadow 0.150s ease-in-out;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  color: white;
+}
+
+.card-title {
+  text-shadow: 3px 3px 0 #1E1E1E;
+  font-family: DynaPuff;
+}
+
+.card-theme {
+  text-shadow: 1px 1px 0 white;
+  color: black;
+}
+
+
+.card-text {
+  color: black;
+}
+
+.difficulty-bars {
+  display: flex;
+  align-items: center;
+  height: 1.5vh;
+  width: 15vw;
+  margin-top: 1vh;
+}
+
+.difficulty-bar {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  margin-right: 2%;
+  border-radius: 2px;
+}
+
+.note {
+  font-size: 2.5vh;
+  font-weight: bold;
+  color: black;
+}
+
+.img-fluid {
+  height: 30vh;
+}
+
+.contrastUpText{
+  color: black!important;
+  text-shadow: none!important;
+}
+
+.DEUTERANOMALIE{
+  text-shadow: none !important;
+  background-color: #9999d4;
+}
+.DEUTERANOMALIE_FONT{
+  -webkit-text-fill-color: #ffffff;
+}
+
+.TRITANOPIE{
+  text-shadow: none !important;
+  background-color: #fb5e7e;
+}
+
+.TRITANOPIE_FONT{
+  -webkit-text-fill-color: black;
+}
+
+

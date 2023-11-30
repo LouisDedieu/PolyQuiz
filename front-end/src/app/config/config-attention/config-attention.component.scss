@@ -1,0 +1,200 @@
+@font-face {
+  font-family: 'DynaPuff';
+  src: url("~src/assets/Fonts/dynapuff/fonts/variable/DynaPuff[wdth,wght].ttf");
+}
+
+@font-face {
+  font-family: 'Nunito';
+  src: url("~src/assets/Fonts/nunito-main/fonts/variable/Nunito[wght].ttf");
+}
+
+html, body {
+  height: 100%;
+  max-height: 100vh;
+  margin: 0;
+}
+
+header {
+  padding-top: 4%;
+  height: 10%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.container {
+  padding-top: 1%;
+  height: 90%;
+  width: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.animateurContainer, .animationContainer, .couleurContainer {
+  font-family: Nunito;
+
+  width: 30%;
+  height: 75vh;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.42);
+  border-radius: 45px;
+}
+
+.app-slider {
+  width: 80%;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+#imageAnimateur {
+  margin-right: 1vw;
+  margin-top: 5vh;
+  max-height:40%;
+  max-width: 100%;
+}
+
+h1{
+  font-family: DynaPuff;
+  font-size: 9vw;
+  font-weight: 700;
+  color: #FFFDF8;
+  text-shadow: 8px 8px 0 #1E1E1E;
+  margin: 0 0 0 22%;
+}
+
+.label{
+  font-size: calc((6vh + 10.68vw)/4);
+  font-weight: 900;
+  text-align: center;
+  margin-top: 5vh;
+
+  background: linear-gradient(90deg, #7D67AA -4.73%, #8791B6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.sliderVitesseAnimation {
+  width: 80%;
+}
+
+.textVitesse {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 2.4vh;
+  font-family: "Roboto Mono";
+}
+
+
+//CONTRASTE
+.contrastUpContainer{
+  background: rgb(200, 200, 200, 0.75)!important;
+}
+
+.contrastUpTextExtrude{
+  background: black !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+}
+
+.contrastUpTitleExtrude{
+  color: whitesmoke;
+  font-family: DynaPuff;
+  font-size: 9vw;
+  font-weight: 700;
+  text-shadow: none;
+  margin: 0 0 0 22%;
+}
+
+.DEUTERANOMALIE{
+  color: #9999d4 !important;
+  text-shadow: none !important;
+}
+.DEUTERANOMALIE_FONT{
+  -webkit-text-fill-color: white;
+}
+
+.TRITANOPIE{
+  color: #fb5e7e !important;
+  text-shadow: none !important;
+}
+
+.TRITANOPIE_FONT{
+  -webkit-text-fill-color: black;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.popup-content {
+  background-color: white;
+  margin: 15% auto;
+  padding: 20px;
+  width: 300px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  position: relative;
+}
+
+.show {
+  display: block;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  color: #000;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.user-svg {
+  cursor: pointer;
+  position: relative;
+  left: 40%;
+  top: 0;
+}
+
+.user-svg:hover {
+  background: radial-gradient(circle, #dee0e3, #b8bcd4);
+  border-radius: 25%;
+}
+
+.textLent{
+  background: #8792b7;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.textRapide{
+  background: #8792b7;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+
+

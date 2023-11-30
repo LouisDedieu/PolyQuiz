@@ -1,0 +1,45 @@
+<div class="page" >
+
+  <div class="titrePage">
+      <app-btn-polyquiz-text id="polyquizHome"></app-btn-polyquiz-text>
+      <a [ngClass]="this.contrasteTroubleEnable ? 'titreStyleContrastOn' : 'titreStyleContrastOff'" >Liste des quizz</a>
+
+      <div class="btnCreerConfig">
+          <app-btn-list-quiz id="creerQuizz" [routerLink]="['/creer-quizz']">Créer mon quizz</app-btn-list-quiz>
+          <app-btn-list-quiz id="configQuizz" [routerLink]="['/configuration']">
+            <div class="settingsContainer">
+                <img [ngClass]="this.contrasteTroubleEnable ? 'imgContrastUp && imageSettings' : 'imageSettings'" src="./assets/Images/settings%20image.png" alt="image settings">
+              <span id="settingsText">Configurations</span>
+            </div>
+          </app-btn-list-quiz>
+      </div>
+  </div>
+  <div class="selectionQuiz">
+    <div class="row justify-content-center">
+      <div class="form">
+        <input type="text" class="form-control form-input fontStyleCanChange" placeholder="Titre du quiz …">
+      </div>
+    </div>
+  </div>
+
+
+  <div class="fontStyleCanChange fontSizeCanChange">
+    <div class="quiz-list-container" *ngIf="!animationsService.isAnimated.value; else carousel"  >
+      <div class="quiz-list">
+        <div class="quiz" *ngFor="let quiz of quizList">
+            <app-quiz-element [quiz]="quiz" routerLink="/accueil-quiz/{{quiz.id}}"></app-quiz-element>
+        </div>
+      </div>
+    </div>
+</div>
+
+  <ng-template #carousel>
+      <app-carousel-quiz ></app-carousel-quiz>
+  </ng-template>
+
+
+
+</div>
+
+
+

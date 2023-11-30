@@ -1,0 +1,47 @@
+<header>
+    <h1 [ngClass]="this.contrasteTroubleEnable ? 'contrastUpText' : ''" class="titreStyle " >PolyQuiz</h1>
+    <app-btn-clickable-background class="retour" [routerLink]="['/configuration']">RETOUR</app-btn-clickable-background>
+</header>
+
+<div class="generalContainer">
+    <div [ngClass]="{'contrastUpContainer' : this.contrasteTroubleEnable}"  class="colorChangerContainer setupContainer">
+        <div class="labelContainer">
+            <p class="label fontStyleCanChange fontSizeCanChange fontColorToChange" [class]="getVisionColorSelected()" [ngClass]="this.contrasteTroubleEnable ? 'contrastUpTextExtrude' : ''" >Jeux de couleurs</p>
+        </div>
+        <div class="btnContainer">
+            <app-btn-on-off-colors id="DEUTERANOMALIE" (click)="toggleJeuxCouleurs($event)"></app-btn-on-off-colors>
+            <app-btn-on-off-colors id="TRITANOPIE" (click)="toggleJeuxCouleurs($event)" ></app-btn-on-off-colors>
+          <app-btn-on-off-colors id="AUCUN" (click)="toggleJeuxCouleurs($event)"></app-btn-on-off-colors>
+        </div>
+    </div>
+
+    <div [ngClass]="{'contrastUpContainer' : this.contrasteTroubleEnable}" class="fontChangerContainer setupContainer">
+        <div class="labelContainer">
+            <p class="label fontStyleCanChange fontSizeCanChange fontColorToChange" [ngClass]="this.contrasteTroubleEnable ? 'contrastUpTextExtrude' : ''" >Font</p>
+        </div>
+
+      <div class="colorExample">
+        <p class="fontStyleCanChange fontSizeCanChange" id="exampleTxt"></p>
+      </div>
+
+      <div class="btnContainer">
+        <app-btn-font (click)="fontChanger($event)" id="btn_fontChanger1"></app-btn-font>
+        <app-btn-font (click)="fontChanger($event)" id="btn_fontChanger2"></app-btn-font>
+        <app-btn-font (click)="fontChanger($event)" id="btn_fontChanger3"></app-btn-font>
+        <app-btn-font (click)="fontChanger($event)" id="btn_fontChanger4"></app-btn-font>
+        <div class="btnContainerValiderReset">
+          <app-btn-clickable-frame-background class="fontChanger" (click)="fontChangerConfirmation()" id="fontChangerConfirmation">Valider</app-btn-clickable-frame-background>
+          <app-btn-clickable-background class="fontChanger" id="btn_fontReset" (click)="resetParameters($event)">Reset</app-btn-clickable-background>
+        </div>
+      </div>
+    </div>
+
+    <div [ngClass]="{'contrastUpContainer' : this.contrasteTroubleEnable}" class="fontSizeChangerContainer  setupContainer">
+        <div class="labelContainer">
+            <p class="label fontStyleCanChange fontSizeCanChange fontColorToChange" [ngClass]="this.contrasteTroubleEnable ? 'contrastUpTextExtrude' : ''">Taille de police</p>
+        </div>
+        <app-slider-font-size class="app-slider"></app-slider-font-size>
+
+      <p class="fontStyleCanChange fontColorToChange " [ngClass]="this.contrasteTroubleEnable ? 'contrastUpTextExtrude' : ''" id="taillePolice" >{{this.getStringFontSize()}}</p>
+    </div>
+</div>

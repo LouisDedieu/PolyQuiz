@@ -1,0 +1,244 @@
+.accueilQuiz{
+  min-height: 100vh;
+  width: 100%;
+}
+
+.header{
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1% 1% 1% 1%;
+}
+
+.infoQuiz{
+  min-height: 80vh;
+  width: 100%;
+  display: grid;
+  grid-template-areas: "leftContainer rightContainer";
+}
+
+.gridWithoutAnimateur{
+  grid-template-columns: 1fr 1fr;
+}
+
+.gridWithAnimateur{
+  grid-template-columns: 2fr 2.5fr 1.5fr;
+}
+
+.leftContainer{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.img-fluid {
+  width: 70%;
+  height: 40%;
+  border-radius: 84px;
+  box-shadow: 12px 12px 13px rgba(134, 134, 134, 0.25),
+  -12px -12px 12px rgba(0, 0, 0, 0.25),
+  12px -12px 12px rgba(255, 255, 255, 0.25),
+  -12px 12px 12px rgba(0, 0, 0, 0.25);
+}
+
+.modifyContainer{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.modifyText{
+  font-size: calc(1vw + 1.5vh);
+  padding-top: 2%;
+  padding-bottom: 2%;
+  color: white;
+  text-shadow: none;
+}
+
+.modifyContainer:hover{
+  color: #212529;
+  text-shadow: none;
+}
+
+.rightContainer{
+  height: 100%;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
+}
+
+.btnJouer{
+  align-self: center;
+  margin-bottom: 5%;
+}
+
+.infoComplementaire{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: start;
+  margin-left: 5%;
+  font-size: 2vw;
+  font-family: Nunito;
+  font-weight: 800;
+}
+
+.difficulty{
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.difficulty-bars {
+  display: flex;
+  align-items: center;
+  height: 2vh;
+  width: 15vw;
+  margin-right: auto;
+  margin-left: 2vw;
+}
+
+.difficulty-bar {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  margin-right: 2%;
+  border-radius: 2px;
+}
+
+.note{
+  padding-left: 5%;
+}
+
+@font-face {
+  font-family: 'Nunito';
+  src: url("~src/assets/Fonts/nunito-main/fonts/variable/Nunito[wght].ttf");
+}
+
+@keyframes animatorFadeIn {
+  from {
+    bottom : -40%;
+  }
+  to {
+    bottom : 0%;
+  }
+}
+
+.animatorContainer {
+  position: absolute;
+  height: 40vh;
+  width: 38vh;
+  right: 1%;
+  bottom: 0%
+}
+
+.animator-relative {
+  object-fit: contain;
+  height: 100%;
+  width: 100%;
+}
+
+.animatorWithAnimationsON {
+  animation-name: animatorFadeIn;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+}
+
+$delay: 0.5s;
+$fade-duration: 1s;
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.bubbleAnimationsON {
+  background: rgba(225, 225, 225, 0.5);
+  border-radius: 50%;
+  opacity: 0;
+  animation: fadeIn $fade-duration forwards;
+}
+
+.bubbleAnimationsOFF {
+  background: rgba(225, 225, 225, 0.5);
+  border-radius: 50%;
+  opacity: 1;
+}
+
+.bubble1 {
+  position: absolute;
+  top: 56%;
+  left: 90%;
+  height: 1vw;
+  width: 1vw;
+}
+
+.bubble2 {
+  position: absolute;
+  top: 46.5%;
+  left: 91%;
+  height: 1.5vw;
+  width: 1.5vw;
+}
+
+.bubble3 {
+  position: absolute;
+  top: 36%;
+  left: 89.5%;
+  height: 2vw;
+  width: 2vw;
+}
+
+.bubble4 {
+  background: rgba(185, 206, 210, 1);
+  position: absolute;
+  top: 25.5%;
+  left: 87%;
+  height: 2.5vw;
+  width: 2.5vw;
+}
+
+.bubble5 {
+  background: rgba(185, 206, 210, 1);
+  position: absolute;
+  top: 16%;
+  left: 82.5%;
+  height: 3vw;
+  width: 3vw;
+}
+
+.bubbleTextContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 12vh;
+  width: 100%;
+  border-radius: 25px;
+  margin-right: 5%;
+  margin-left: 5%;
+
+  font-size: 150%;
+  font-family: Nunito;
+  font-weight: 700;
+  text-align: center;
+}
+
+.bubbleTextContainer>p {
+  margin: 0;
+  padding: 0;
+}
